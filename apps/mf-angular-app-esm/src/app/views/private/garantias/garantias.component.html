@@ -1,0 +1,45 @@
+<section class="max-w-[90%] py-8">
+    <div class="mb-4 flex justify-between items-center">
+        <h1 class="text-[28px] font-bold">{{ garantiaConstants().title }}</h1>
+        @if (garantiaConstants().acotar) {
+            <avla-button class="avla-btn-login" theme="primary" [label]="garantiaConstants().acotar!"></avla-button>
+        }
+    </div>
+
+    <div class="mb-6 w-[80%]">
+        <p class="text-[16px] leading-relaxed">
+            {{ garantiaConstants().description }}
+        </p>
+    </div>
+    <app-card-garantia [cards]="garantiaConstants().cards"></app-card-garantia>
+</section>
+
+@if (garantiaConstants().faqs) {
+    <div class="w-full flex gap-6">
+        @for (faq of garantiaConstants().faqs!.cards; track faq.title) {
+            <app-faq-garantia [faq]="faq"></app-faq-garantia>
+        }
+    </div>
+}
+
+@if (garantiaConstants().modalities) {
+    <app-modalities-garantia [modalities]="garantiaConstants().modalities!"></app-modalities-garantia>
+}
+
+<section class="w-[90%] rounded-lg shadow-md p-10 mt-10">
+    <div class="flex flex-col gap-6 min-h-[400px]">
+        <div>
+            <p class="text-[20px] font-bold">{{ garantiaConstants().requirements.title }}</p>
+        </div>
+        <div class="flex gap-6">
+            <div class="flex flex-col gap-[10px] flex-1">
+                @for (requirement of garantiaConstants().requirements.items; track requirement.title; let i = $index) {
+                    <app-requirements-garantia [requirement]="requirement" [index]="i"></app-requirements-garantia>
+                }
+            </div>
+            <div class="flex-1 relative">
+                <img [src]="garantiaConstants().image | assetUrl" alt="" class="absolute right-0">
+            </div>
+        </div>
+    </div>
+</section>

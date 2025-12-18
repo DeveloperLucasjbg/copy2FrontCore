@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title> Root Config </title>
+
+     <script type="importmap">
+      {
+        "imports": {
+          "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@6.0.3/lib/es2015/esm/single-spa.min.js",
+          "single-spa-layout": "https://cdn.jsdelivr.net/npm/single-spa-layout@1.6.0/dist/esm/single-spa-layout.min.js",
+          "@avla/root-config": "/avla-root-config.js"
+        }
+      }
+      </script>
+
+    <!-- SystemJS -->
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.14.2/dist/system.min.js"></script>
+
+    <!-- Necesario para Angular -->
+    <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.8/dist/zone.min.js"></script>
+
+  </head>
+  <body>
+      <!-- 6. Importar root-config como ES Module -->
+      <script type="module">
+        import '@avla/root-config';
+      </script>
+
+  </body>
+</html>

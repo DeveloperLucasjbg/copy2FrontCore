@@ -1,0 +1,96 @@
+@import "tailwindcss";
+@import "../node_modules/@avla/ui-design/app/output.css";
+@config "../css-tailwind.config.js";
+@theme {
+  --color-blue: #0071CE;
+  --color-blue-pressed: #00229E;
+  --color-dark-purp: #51009D;
+  --color-blue-opacity-44: rgba(0, 113, 206, 0.44);
+  --color-dark: #1F2937;
+  --color-gray-2: #4B5563;
+  --color-gray-3: #D1D5DB;
+  --color-gray-4: #F6F5F6;
+  --color-gray-5: #FAFAFA;
+  --color-gray-opacity-30: #E6EBFD4D;
+  --color-white: #FFFFFF;
+  --color-success: #46A348;
+  --color-error: #CB4141;
+    
+      /* Breakpoints personalizados */
+  --breakpoint-max-sm: 799px;
+  --breakpoint-max-md: 1023px;
+  --breakpoint-max-lg: 1199px;
+
+  /* Fuente predeterminada */
+  --font-sans: "Loos Normal", sans-serif;
+  
+  /* Line-heights personalizados */
+  --line-height-lh-36: 2.25rem; /* 36px */
+  --line-height-lh-28: 1.75rem;
+  --line-height-lh-24: 1.5rem;
+  --line-height-lh-22: 1.375rem;
+  --line-height-lh-20: 1.25rem;
+
+  /* Tamaños de fuente */
+  --text-xsm: 0.3125rem;
+  --text-sm: 0.6875rem;
+  --text-sm-plus: 0.8125rem;
+  --text-m: 0.875rem;
+  --text-base: 1rem;
+  --text-l: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.375rem;
+  --text-3xl: 1.5rem;
+  --text-4xl: 1.875rem;
+  --text-5xl: 2rem;
+
+    /* Alturas de línea */
+  --line-height-lh-36: 2.25rem;
+  --line-height-lh-28: 1.75rem;
+  --line-height-lh-24: 1.5rem;
+  --line-height-lh-22: 1.375rem;
+  --line-height-lh-20: 1.25rem;
+
+    /* Sombras */
+  --shadow-a-md: 5px 5px 12px rgba(166, 180, 200, 0.7), -5px -5px 10px rgba(255, 255, 255, 0.8);
+  --shadow-message-on-delete: 1px 1px 4px rgba(203, 65, 65, 0.8), -1px -1px 4px var(--color-white);
+  --shadow-card-shadow-medium: -2px -2px 6px rgba(255, 255, 255, 0.80), 2px 2px 6px rgba(166, 180, 200, 0.70);
+  --shadow-button-shadow: 1px 1px 4px rgba(166, 180, 200, 0.7), -1px -1px 4px var(--color-white);
+  --shadow-fution-small: 1px 1px 4px rgba(166, 180, 200, 0.7), -1px -1px 4px var(--color-white);
+  --shadow-cards-shadow: 0px 4px 10px rgba(31, 41, 55, 0.15);
+  --shadow-soft-shadow-2: 1px 1px 12px rgba(88, 89, 89, 0.05);
+  --shadow-card-basic: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-row-table: 0px 2px 4px rgba(22, 22, 22, 0.15);
+  --shadow-float-button: 1px 1px 4px rgba(166, 180, 200, 0.70), -1px -1px 4px #FFF;
+
+  /* Drop Shadows */
+  --drop-shadow-img: 0px 2px 10px rgba(0, 0, 0, 0.25);
+
+  /* Fondos */
+  --background-gradient-text: linear-gradient(115deg, #29ABE2 -11.87%, #51009D 122.19%);
+  --background-gradient-text-lineal: linear-gradient(270deg, #51009D -5.56%, #0031E2 79.23%, #28A7DE 107.49%);
+  --background-gradient-opacity: linear-gradient(to bottom, rgba(250, 250, 250, -0.07), rgba(255, 255, 255, 0.85));
+  --background-login: url("assets/svg/bg-login.svg");
+  --background-screens: url("assets/svg/bg-screens.svg");
+  --background-btns-isla: url("assets/svg/bg-btns-isla.svg");
+  --background-a-content: url("assets/svg/a_content.svg");
+  --background-change-password: url("assets/svg/bg-change-password.svg");
+}
+
+@layer components {
+  .titles-1 { font-size: 32px; font-weight: bold; line-height: 36px; }
+  .titles-2 { font-size: 32px; font-weight: 600; line-height: 36px; }
+  .titles-3 { font-size: 24px; font-weight: 400; line-height: 28px; }
+  .subtitles-1 { font-size: 20px; font-weight: 600; line-height: 24px; }
+  .subtitles-2 { font-size: 18px; font-weight: 500; line-height: 22px; }
+  .subtitles-3 { font-size: 18px; font-weight: 300; line-height: 22px; }
+  .buttons-1 { font-size: 16px; font-weight: 700; line-height: 24px; }
+  .buttons-2 { font-size: 16px; font-weight: 600; line-height: 20px; }
+  .buttons-text { font-size: 16px; font-weight: 400; line-height: 20px; }
+  .table-text-1 { font-size: 16px; font-weight: 300; line-height: 20px; }
+  .table-text-2 { font-size: 14px; font-weight: 500; line-height: 20px; }
+  .text-1 { font-size: 14px; font-weight: 400; line-height: 20px; }
+  .text-2 { font-size: 13px; font-weight: 500; line-height: 20px; }
+  .text-3 { font-size: 11px; font-weight: 600; line-height: 20px; }
+  .text-4 { font-size: 12px; font-weight: 500; line-height: 15.6px; }
+}

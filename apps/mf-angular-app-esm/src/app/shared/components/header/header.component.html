@@ -1,0 +1,28 @@
+<header class="flex justify-center items-center">
+    <div class="w-[90%] flex justify-between items-center my-5">
+        <div>
+            <img [src]="'svg/logoavlacoreazul.svg' | assetUrl">
+        </div>
+        <div class="flex flex-row gap-2.5">
+            <div>
+                <country-select [options]="flags" [imagePath]="flagsLocation" />
+            </div>
+            <div class="flex items-center gap-2.5">
+                <div>
+                    <div class="relative">
+                        <span class="flex items-center relative rounded-full border-2 border-gray-3 overflow-hidden w-10 h-10 logo-shadow">
+                            <img class="mx-2 w-full" [src]="'svg/person_1F2937.svg' | assetUrl" />
+                        </span>
+                        
+                        <span class="absolute w-2.5 h-2.5 bg-[#1ED030] rounded-full overflow-hidden top-0 right-0 z-[2]"></span>
+                    </div>
+                    
+                </div>  
+                <div class="flex flex-col">
+                    <b class="text-[13px]">Daniel Espinoza</b>
+                    <span class="text-[13px]">Dani Espinoza</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

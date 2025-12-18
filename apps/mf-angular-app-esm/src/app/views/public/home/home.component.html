@@ -1,0 +1,25 @@
+<div class="flex flex-col gap-3">
+  <p class="text-2xl font-bold text-gray-900">Bem vindo {{ user.name }}</p>
+  <span>Aqui você encontra cotações, apólices e soluções Avla em um só espaço. O que deseja fazer hoje?</span>
+</div>
+<div class="flex flex-col w-full gap-[20px]">
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-x-10 gap-y-10">
+    @for (item of homeCard; track $index) {
+    <app-home-card [title]="item.title" [description]="item.description" [image]="item.image">
+    </app-home-card>
+    }
+  </div>
+  <div class="notification-card flex w-full px-[40px] py-[20px] rounded-[15px] bg-white mt-[40px]">
+    <div class="flex gap-[10px] w-full">
+      <div class="flex gap-[20px]">
+        <div class="flex items-center justify-center min-w-[100px] min-h-[100px] bg-[#0071CE66] rounded-[15px]">
+          <img [src]="'svg/campaign.svg' | assetUrl" alt="campaign" class="w-[50px] h-[50px]">
+        </div>
+        <div>
+          <h1 class="text-[22px] font-bold text-gray-900">Atualiza aí</h1>
+          <span>Prezados clientes, em virtude de normativas fiscais, a partir de 08/07/2025 todas as propostas pendentes de emissão há mais de 15 dias serão inativadas.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

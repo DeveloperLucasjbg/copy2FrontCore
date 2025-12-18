@@ -1,0 +1,26 @@
+@if (cards()) {
+    <div class="w-[90%] mt-6">
+        <p class="text-[18px] font-bold mb-4">{{ cards()!.title }}</p>
+
+        <section class="flex gap-6 
+                 sm:justify-start sm:overflow-x-auto sm:flex-nowrap">
+            @for (card of cards()!.items; track card.title) {
+                <div class="w-[403px] h-[259px] bg-white rounded-lg shadow-md p-6 
+                       flex flex-col justify-between shrink-0">
+                    <div class="flex flex-col gap-3">
+                        @if (card.icon) {
+                            <img [src]="card.icon | assetUrl" alt="" class="w-8 h-8">
+                        }
+                        <p class="text-[22px] font-bold">{{ card.title }}</p>
+                        <p class="text-[14px]">
+                            {{ card.description }}
+                        </p>
+                    </div>
+                    <div class="flex justify-end mt-4">
+                        <avla-button class="avla-btn-login" theme="primary" [label]="card.buttonLabel"></avla-button>
+                    </div>
+                </div>
+            }
+        </section>
+    </div>
+}

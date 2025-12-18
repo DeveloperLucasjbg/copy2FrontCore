@@ -1,0 +1,108 @@
+<div class="w-full h-screen">
+  <div class="grid grid-cols-2 items-center h-full">
+    <section class="col-span-1 relative h-full flex items-center justify-center overflow-hidden">
+      <img
+        [src]="'svg/loginFrame.svg' | assetUrl" 
+        alt="avla poster"
+        class="w-full h-full object-cover object-center"
+      />
+    </section>
+
+    <section id="login" class="col-span-1 flex flex-col items-center gap-6 px-4">
+      <div class="flex flex-col items-center gap-8 w-[500px]">
+        <div class="flex flex-row justify-between gap-3 w-full p-0">
+          <h3 class="text-dark text-2xl font-normal leading-lh-28 flex flex-col py-2 w-[80%]">
+            {{ loginTexts.formTitle | translate }}
+            <strong>
+              {{ loginTexts.formSubtitle | translate }} 
+            </strong>
+          </h3>
+          <country-select class="w-fit"
+            [options]="flags"
+            [imagePath]="flagsLocation"
+          />
+        </div>
+        <p class="text-dark font-[500] text-[1rem] leading-[24px] font-[Loos Normal]">Encontre aqui cotações, apólices e detalhes dos nossos produtos em um só lugar</p>
+      
+        
+        <form
+          class="flex flex-col gap-6 w-full bg-white max-sm:w-full"
+          [formGroup]="formLogin"
+        >
+        <app-email-input
+        formControlName="email"
+        [disabled]="false"
+        [requiredValidation]="false"
+        [lang]="'pt'"
+        [placeholder]="'E-mail'"
+        >
+        </app-email-input>  
+          <div class="flex flex-col gap-6 p-0 text-gray-1">
+            <app-password-input
+              formControlName="password"
+              [disabled]="false"
+              [requiredValidation]="false"
+              [lang]="'pt'"
+              [placeholder]="'Senha'"
+              [iconBaseUrl]="'' | assetUrl"
+              >
+            </app-password-input>
+            <app-checkbox-input 
+                [label]="'Lembrar dados'"
+                [type]="'checkbox'"
+                [requiredValidation]="true"
+                [disabled]="false"
+                [lang]="'pt'">
+            </app-checkbox-input>
+            <p
+              class="w-full ml-auto cursor-pointer text-blue not-italic font-medium text-smPlus leading-[16px] tracking-[-0.12px] self-start"
+              (click)="navigateToRecoverPass()"
+            >
+              {{ loginTexts.recoverPassword | translate }}
+            </p>
+
+            @if (hiddenV2) {
+            <div class="mx-auto">
+              <re-captcha
+                id="token"
+                name="token"
+                #recaptcha="ngModel"
+                [ngModelOptions]="{ standalone: true }"
+                [(ngModel)]="token"
+                required
+                [class.is-invalid]="
+                  recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)
+                "
+              ></re-captcha>
+            </div>
+            }
+            
+            <div class="w-full flex items-center justify-center">
+              <avla-button
+                  [classes]="'w-full min-w-[300px] flex justify-center items-center'"
+                  theme="primary"
+                  (click)="login()"
+                  [disabled]="!this.formLogin.valid || this.token === undefined || this.token.length < 2"
+                  [label]="loginTexts.send | translate"
+                >
+                </avla-button> 
+            </div>
+            
+            <div class="flex flex-row text-dark gap-1">
+              <p class="text-[0.8rem] font-[Loos Normal]">{{ loginTexts.register1 | translate }}</p>
+              <p class=" text-blue text-[0.8rem] font-[Loos Normal]" >{{ loginTexts.register2 | translate }}</p>
+            </div>
+            <p
+            class="w-full ml-auto cursor-pointer text-gray-2 text-[10px] not-italic font-normal leading-[13px] text-center"
+            >
+              {{ loginTexts.termsConditions | translate }}
+              <span class="font-medium underline">              
+                {{ loginTexts.termsConditionsUnderlined | translate }}
+              </span>
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+</div>

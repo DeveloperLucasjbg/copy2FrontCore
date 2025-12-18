@@ -1,0 +1,24 @@
+<!-- <app-header></app-header> -->
+<avla-header [user]="{
+  name: user.name}" 
+[menuItems]="menuItems" 
+[localeOptions]="localeOptions" 
+[iconBaseUrl]="'' | assetUrl"
+(localeChange)="onLocaleChange($event)" (menuClick)="onMenuClick($event)" (logout)="onLogout()">
+</avla-header>
+<section class="flex w-[90%] mx-auto">
+  <div class="flex justify-space-between gap-[5rem] mt-10 mb-20 w-full">
+    <app-sidenav [items]="navItems" (itemClick)="onNavItemClick($event)">
+    </app-sidenav>
+
+    <div class="flex w-full">
+      <router-outlet />
+    </div>
+  </div>
+</section>
+<section class="mt-[10px] mb-[10px]">
+  <div class="w-[90%] mx-auto  pt-10">
+    <app-home-footer></app-home-footer>
+  </div>
+</section>
+

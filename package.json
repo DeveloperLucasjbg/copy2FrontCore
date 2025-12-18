@@ -1,0 +1,22 @@
+{
+  "name": "microfrontend-root",
+  "private": true,
+  "packageManager": "pnpm@10.14.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "start": "turbo run serve --parallel",
+    "build": "turbo run build",
+    "build:dev": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.5"
+  },
+  "dependencies": {
+    "ng-recaptcha-2": "15.0.0"
+  }
+}

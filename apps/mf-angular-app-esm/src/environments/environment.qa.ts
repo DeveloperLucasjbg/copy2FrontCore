@@ -1,0 +1,127 @@
+export const environment = {
+  production: false,
+  envName: 'qa',
+  recaptcha: {
+    siteKey: '6LdmYlUaAAAAAM75PmrKFyKnqYpKTAFdtbzMC7Xj',
+    siteKey2: '6LdQtWwcAAAAALGYMgrt2O6lTCdaRb_QLneBb90Q',
+  },
+  idleTimeout: 20,
+  urlAvla: 'https://www.avla.com/cl/',
+  telAvla: '+56 2 2706 8900',
+  emailContact: 'contacto@avla.com',
+  twitterURL: 'https://twitter.com/somosavla',
+  facebookURL: 'https://es-la.facebook.com/somosavla',
+  linkedinURL: 'https://cl.linkedin.com/company/somosavla',
+  instagramURL: 'https://www.instagram.com/somosavla/',
+  youtubeURL: 'https://www.youtube.com/@AVLAcorp',
+  ventaEnVerdeAvlaURL: 'https://ventaverde.avla.com/cl/ventaenverde/login',
+  portalClientesAvlaURL: 'https://portalclientes.avla.com/#/login',
+  quienesSomosAvlaURL: 'https://www.avla.com/cl/quienes-somos',
+  impactoEsgURL: 'https://www.avla.com/cl/impacto',
+  titles: {
+    portal: 'Onboarding P&C',
+    home: 'Onboarding P&C',
+    user: 'Onboarding P&C',
+    parameters: 'Onboarding P&C',
+  },
+  /* https://25vqh2evra.execute-api.us-west-2.amazonaws.com/qa/api-onboarding-pandc/canales-onboarding-pandc/ */
+  API_URL:
+    'https://25vqh2evra.execute-api.us-west-2.amazonaws.com/qa/api-onboarding-pandc/',
+  API_PORT: '',
+  API_PATH: 'canales-onboarding-pandc/',
+  API_VERSION: 'v1',
+  gtagCode: 'UA-83050105-10',
+  googleTagManagerId: 'GTM-KHXJ86D',
+  urlOnboardingBrasil: 'https://onboarding-frontend-qa.avla.com/',
+  validateAccessPath: 'validar-acesso',
+  externalLinks: {
+    general: {
+      seguroEmpresarial: "https://www.avla.com/br",
+      seguroGarantia: "https://www.avla.com/br/categorias/seguros-garantia",
+      seguroGarantiaJudicial: "https://www.avla.com/br/subcategorias/seguro-garantia-judicial",
+      seguroRicosDeEngenharia: "https://www.avla.com/br/subcategorias/seguro-engenharia",
+      seguroPatrimonial: "https://www.avla.com/br/subcategorias/seguro-patrimonial",
+      seguroDeCredito: "https://www.avla.com/br/categorias/seguros-de-credito-brasil",
+      whoWeAre: "https://www.avla.com/br/quem-somos",
+      sustentabilidade: "https://www.avla.com/br/sustentabilidade",
+      carreiras: "https://www.linkedin.com/company/avla-brasil/",
+      canalDeDenuncias: "https://www.avla.com/br/canal-de-denuncias",
+      avisoDeSinistro: "https://www.avla.com/br/denuncia-de-sinistros",
+      ouvidoria: "https://www.avla.com/br/ouvidoria",
+      contato: "https://www.avla.com/br/contato-brasil",
+      politicas: "https://www.avla.com/br/nossas-politicas",
+      proteccionDados: "https://drive.google.com/file/d/1ynbAuJO1i60fruRrIK6QPYKmd2m5U-NH/view",
+      linkedIn: "https://www.linkedin.com/company/avla-brasil/",
+      instagram: "https://www.instagram.com/somosavlabr/"
+    },
+    br: {
+      sacAvlaemail: 'sac@avla.com',
+      politicaDePrivacidadAvlaURL:
+        'https://drive.google.com/file/d/1ynbAuJO1i60fruRrIK6QPYKmd2m5U-NH/view',
+      canalDeDenunciasAvlaURL: 'https://www.avla.com/br/reclama%C3%A7%C3%B5es',
+      ouvidoriaAvlaURL: 'https://www.avla.com/br/ouvidoria',
+      contactoAvlaURL: 'https://www.avla.com/br/contato',
+      nossasPoliticas: 'https://www.avla.com/br/politicas',
+      facebookAvlaURL: 'https://www.facebook.com/search/top?q=avla',
+      instagramAvlaURL: 'https://www.instagram.com/somosavlabr/',
+      linkedinAvlaURL: 'https://www.linkedin.com/company/avla-brasil/',
+      youtubeAvlaURL: 'https://www.youtube.com/@AVLAcorp',
+    },
+    cl: {
+      quienesSomosAvlaURL: 'https://medium.com/@somosavla',
+      trabajaConNosotrosAvlaURL: 'https://avla.trabajando.cl/home/',
+      ayudaAvlaURL: 'https://www.avla.com/cl/contacto',
+      canalDenunciasAvlaURL: 'https://www.avla.com/cl/canal-de-denuncias',
+      propiedadesAvlaURL: 'https://avlapropiedades.com/cl',
+      // seguroGarantiasAvlaURL: 'https://www.avla.com/cl/', urlAvla
+      polizaGarantiaAvlaURL: 'https://www.avla.com/cl/polizas-garantias',
+      seriedadDeOfertaAvlaURL:
+        'https://www.avla.com/cl/polizas-garantias/seriedad-oferta',
+      garantiaFielCumpliemientoAvlaURL:
+        'https://www.avla.com/cl/polizas-garantias/fiel-cumplimiento',
+      nuestrasPoliticasAvlaURL: 'https://www.avla.com/cl/politicas',
+      facebookAvlaURL: 'https://www.facebook.com/search/top?q=avla',
+      instagramAvlaURL: 'https://www.instagram.com/somosavlape/',
+      linkedinAvlaURL: 'https://www.linkedin.com/company/somosavlape/',
+      youtubeAvlaURL: 'https://www.youtube.com/@AVLAcorp',
+    },
+    pe: {
+      sobreNosotrosAvlaURL: 'https://www.avla.com/pe/quienes-somos',
+      ayudaAvlaURL: 'https://www.avla.com/pe/contacto',
+      canalDenunciasAvlaURL: 'https://www.avla.com/pe/canal-de-denuncias',
+      nuestrasPoliticasAvlaUrl: 'https://www.avla.com/pe/politicas',
+      smvAvlaURL:
+        'https://www.smv.gob.pe/SIMV/Bp_LisDatosGenerales?data=468D0FA6AD02BC0A4B6F46023217A6&op=bq1',
+      portalDeUsuariosAvlaURL: 'https://www.sbs.gob.pe/usuarios/',
+      autorizacionDeEmisionAvlaURL:
+        'https://www.sbs.gob.pe/supervisados-y-registros/empresas-supervisadas/informacion-sobre-supervisadas/sistema-financiero-supervisadas/relacion-de-empresas-que-se-encuentran-autorizadas-a-emitir-cartas-fianza',
+      relacionDeSegurosOfrecidosAvlaURL:
+        'https://www.sbs.gob.pe/usuarios/seguros/relacion-de-seguros-ofrecidos-en-el-peru',
+      politicasDeProteccionDatosPersonalesAvlaURL:
+        'https://drive.google.com/file/d/1fVTKdxh4v0DMaAoqrJNWkDdtsyN1ZHub/view?usp=sharing',
+      protocolosSobreDerechosAvlaURL:
+        'https://drive.google.com/file/d/1MtohI3RAb4W-8qZIIyXR75yiArZTNqRC/view',
+      facebookAvlaURL: 'https://www.facebook.com/search/top?q=avla',
+      instagramAvlaURL: 'https://www.instagram.com/somosavla/',
+      linkedinAvlaURL: 'https://www.linkedin.com/company/somosavla/people/',
+      youtubeAvlaURL: 'https://www.youtube.com/@AVLAcorp',
+    },
+  },
+  datadogRum: {
+    clientToken: 'pub5953b9e710a4344f3a862b638e791c3c',
+    applicationId: '723b238f-dee9-4c81-8e5b-07d95010afe2',
+    // `site` refers to the Datadog site parameter of your organization
+    // see https://docs.datadoghq.com/getting_started/site/
+    site: 'datadoghq.com',
+    service: 'onboarding-p&c-qa',
+    env: 'qa',
+    // Specify a version number to identify the deployed version of your application in Datadog
+    // version: '1.0.0',
+    sessionSampleRate: 100,
+    sessionReplaySampleRate: 100,
+    trackUserInteractions: true,
+    trackResources: true,
+    trackLongTasks: true,
+    defaultPrivacyLevel: 'allow',
+  }
+};
